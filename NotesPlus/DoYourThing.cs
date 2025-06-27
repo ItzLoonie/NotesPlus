@@ -433,31 +433,35 @@ namespace NotesPlus
 			{
 				if (a == "ti")
 				{
-					return new Tuple<Role, FactionType>(Role.TOWN_SUPPORT, FactionType.TOWN);
+					return new Tuple<Role, FactionType>((Role)103, FactionType.TOWN);
 				}
 				if (a == "tp")
 				{
-					return new Tuple<Role, FactionType>(Role.RANDOM_COVEN, FactionType.TOWN);
+					return new Tuple<Role, FactionType>((Role)104, FactionType.TOWN);
 				}
 				if (a == "ts")
 				{
-					return new Tuple<Role, FactionType>(Role.COVEN_UTILITY, FactionType.TOWN);
-				}
-				if (a == "tpow" || a == "tpower")
-				{
-					return new Tuple<Role, FactionType>(Role.TOWN_POWER, FactionType.TOWN);
+					return new Tuple<Role, FactionType>((Role)106, FactionType.TOWN);
 				}
 				if (a == "tk")
 				{
-					return new Tuple<Role, FactionType>(Role.COVEN_KILLING, FactionType.TOWN);
+					return new Tuple<Role, FactionType>((Role)105, FactionType.TOWN);
 				}
 				if (a == "rt" || a == "town" || a == "townie")
 				{
-					return new Tuple<Role, FactionType>(Role.TOWN_PROTECTIVE, FactionType.TOWN);
+					return new Tuple<Role, FactionType>((Role)101, FactionType.TOWN);
 				}
 				if (a == "ct")
 				{
-					return new Tuple<Role, FactionType>(Role.TOWN_KILLING, FactionType.TOWN);
+					return new Tuple<Role, FactionType>((Role)102, FactionType.TOWN);
+				}
+				if (a == "te" || a == "texe" || a == "texecute")
+				{
+					return new Tuple<Role, FactionType>((Role)119, FactionType.TOWN);
+				}
+				if (a == "tg" || a == "tgov" || a == "tgovern")
+				{
+					return new Tuple<Role, FactionType>((Role)120, FactionType.TOWN);
 				}
 				bool flag = Utils.IsPandora();
 				FactionType item = FactionType.COVEN;
@@ -467,31 +471,31 @@ namespace NotesPlus
 				}
 				if (a == "cd")
 				{
-					return new Tuple<Role, FactionType>(Role.RANDOM_NEUTRAL, item);
+					return new Tuple<Role, FactionType>((Role)109, item);
 				}
 				if (a == "ck")
 				{
-					return new Tuple<Role, FactionType>(Role.NEUTRAL_KILLING, item);
+					return new Tuple<Role, FactionType>((Role)110, item);
 				}
 				if (a == "cp" || a == "cpow" || a == "cpower")
 				{
-					return new Tuple<Role, FactionType>(Role.NEUTRAL_EVIL, item);
+					return new Tuple<Role, FactionType>((Role)111, item);
 				}
 				if (a == "cu")
 				{
-					return new Tuple<Role, FactionType>(Role.NEUTRAL_APOCALYPSE, item);
+					return new Tuple<Role, FactionType>((Role)112, item);
 				}
 				if (a == "rc" || a == "cov" || a == "coven")
 				{
-					return new Tuple<Role, FactionType>(Role.COVEN_DECEPTION, item);
+					return new Tuple<Role, FactionType>((Role)107, item);
 				}
 				if (a == "cc")
 				{
-					return new Tuple<Role, FactionType>(Role.COVEN_POWER, item);
+					return new Tuple<Role, FactionType>((Role)108, item);
 				}
 				if (a == "ne")
 				{
-					return new Tuple<Role, FactionType>(Role.COMMON_COVEN, FactionType.NONE);
+					return new Tuple<Role, FactionType>((Role)115, FactionType.NONE);
 				}
 				bool flag2 = Utils.IsCompliance();
 				FactionType item2 = FactionType.NONE;
@@ -501,11 +505,11 @@ namespace NotesPlus
 				}
 				if (a == "nk")
 				{
-					return new Tuple<Role, FactionType>((Role)118, item2);
+					return new Tuple<Role, FactionType>((Role)116, item2);
 				}
 				if (a == "rn" || a == "neut" || a == "neutral")
 				{
-					return new Tuple<Role, FactionType>(Role.COMMON_TOWN, FactionType.NONE);
+					return new Tuple<Role, FactionType>((Role)114, FactionType.NONE);
 				}
 				FactionType item3 = FactionType.APOCALYPSE;
 				if (flag)
@@ -514,19 +518,15 @@ namespace NotesPlus
 				}
 				if (a == "na" || a == "ra" || a == "apoc" || a == "apocalypse" || a == "horseman" || a == "horsemen")
 				{
-					return new Tuple<Role, FactionType>(Role.ANY, item3);
-				}
-				if (a == "cn")
-				{
-					return new Tuple<Role, FactionType>((Role)121, FactionType.NONE);
+					return new Tuple<Role, FactionType>((Role)113, item3);
 				}
 				if (a == "np" || a == "pariah")
 				{
-					return new Tuple<Role, FactionType>((Role)119, FactionType.NONE);
+					return new Tuple<Role, FactionType>((Role)117, FactionType.NONE);
 				}
-				if (a == "ns")
+				if (a == "ns" | a == "no")
 				{
-					return new Tuple<Role, FactionType>((Role)120, FactionType.NONE);
+					return new Tuple<Role, FactionType>((Role)118, FactionType.NONE);
 				}
 			}
 			return new Tuple<Role, FactionType>(Role.NONE, FactionType.NONE);
